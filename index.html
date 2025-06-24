@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Order Page</title>
+  <link rel="stylesheet" href="orderpage.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+  (function () {
+    emailjs.init({
+      publicKey: "GJQZnO8pQ_Gur1rXO"  // Your EmailJS public key
+    });
+  })();
+</script>
+ </head>
+<body>
+    <div class="order-heading">
+  <h1>Thanks for Choosing Us! 🎉</h1>
+  <p>Place your order below — Fast, Secure & Cash on Delivery Available</p>
+</div>
+<div class="product-wrapper">
+
+  <!-- 🔹 LEFT SIDE BUTTONS -->
+  <div class="side-column">
+    <button class="blink btn-delivery" style="background-color: darkgoldenrod;">🚚 Free Delivery</button>
+    <button class="blink btn-fast" style="background-color: darkgrey;">🚀 Fast Shipping</button>
+    <button class="blink btn-pack" style="background-color: darkorange;">📦 Secure Packing</button>
+    <button class="blink btn-time" style="background-color: darkkhaki;">⏱ Limited Time</button>
+  </div>
+
+  <!-- 🎯 PRODUCT CARD CENTER -->
+  <div class="product">
+    <img src="download 9.jpg" alt="12 in 1 Makeup Deal" />
+    <h1>12 in 1 Makeup Deal</h1>
+    <p class="price">PKR 1,620</p>
+    <p class="desc">Product Details:Material: Cream
+     Product Feature: 12 in 1.</p>
+  </div>
+
+  <!-- 🔸 RIGHT SIDE BUTTONS -->
+  <div class="side-column">
+    <button class="blink btn-cod" style="background-color: red;">💵 Cash on Delivery</button>
+        <button class="blink btn-discount" style="background-color: blue;">🎁 Special Discount</button>
+    <button class="blink btn-return" style="background-color: purple;">🔄 Easy Returns</button>
+    <button class="blink btn-contact" style="background-color: aquamarine;">📞 Order Now</button>
+  </div>
+
+</div>
+<!-- 📦 PRODUCT SECTION START -->
+<div class="product-showcase">
+  
+  <div class="image-box">
+  <img id="main-image" src="donlaid 1.jpg" alt="Main Image" />
+
+ <div class="thumbnail-row">
+  <img src="donlaid 1.jpg" onclick="changeImage('donlaid 1.jpg')" alt="Thumb 1" />
+  <img src="download 10.jpg" onclick="changeImage('download 10.jpg')" alt="Thumb 2" />
+  <img src="donlaid 1.jpg" onclick="changeImage('donlaid 1.jpg')" alt="Thumb 3" />
+</div>
+</div>
+
+  <!-- 🔹 Product Details Box -->
+  <div class="info-box">
+    <h2>12 in one Makeup Deal – PKR 1,600</h2>
+    <br>
+    <hr>
+    <p class="desc">
+      Package Includes: 1 x Lipsticks, 1 x Foundation, 1 x Concealer, 1 x Mascara, 1 x Makeup Fixer, 1 x Eyeliner, 1 x Beauty Blender, 1 x Primer, 1 x Setting Loose Powder, 2 x Lip Pencil
+    </p>
+    <ul>
+      <li>✅ Product Details:Material: Cream</li>
+      <li>✅ Call / Product Feature: 12 in 1</li>
+      <li>✅ Free Delivery Across Pakistan</li>
+    </ul>
+    
+    <!-- 🛒 Order Button -->
+    <button onclick="scrollToOrder()">🛒 Place Order</button>
+  </div>
+
+</div>
+<!-- 📦 PRODUCT SECTION END -->
+
+  
+<div class="order-form">
+   <form id="orderForm">
+  <h2>Place Your Order</h2>
+  <input type="text" name="name" placeholder="Your Name" required />
+  <input type="tel" name="phone" placeholder="Phone Number" required />
+  <select name="province" id="province" required>
+  <option value="">Select Province</option>
+  <option value="Punjab">Punjab</option>
+  <option value="Sindh">Sindh</option>
+  <option value="Khyber Pakhtunkhwa">Khyber Pakhtunkhwa</option>
+  <option value="Balochistan">Balochistan</option>
+  <option value="Islamabad Capital Territory">Islamabad Capital Territory</option>
+  <option value="Gilgit-Baltistan">Gilgit-Baltistan</option>
+  <option value="Azad Jammu & Kashmir">Azad Jammu & Kashmir</option>
+</select>
+      <input type="text" name="Your City" placeholder="Your Main City Where you live" required />
+<select name="city" id="city" required>
+  <option value="">Select City If you Find If Not Then Click None</option>
+    <option value="None">None</option>
+  <option value="Abbottabad">Abbottabad</option>
+  <option value="Astore">Astore</option>
+  <option value="Attock">Attock</option>
+  <option value="Bahawalnagar">Bahawalnagar</option>
+  <option value="Bahawalpur">Bahawalpur</option>
+  <option value="Bannu">Bannu</option>
+  <option value="Bhakkar">Bhakkar</option>
+  <option value="Burewala">Burewala</option>
+  <option value="Chakwal">Chakwal</option>
+  <option value="Chaman">Chaman</option>
+  <option value="Charsadda">Charsadda</option>
+  <option value="Chiniot">Chiniot</option>
+  <option value="Dadu">Dadu</option>
+  <option value="Dera Ghazi Khan">Dera Ghazi Khan</option>
+  <option value="Faisalabad">Faisalabad</option>
+  <option value="Gilgit">Gilgit</option>
+  <option value="Gujranwala">Gujranwala</option>
+  <option value="Gujrat">Gujrat</option>
+  <option value="Gwadar">Gwadar</option>
+  <option value="Hyderabad">Hyderabad</option>
+  <option value="Islamabad">Islamabad</option>
+  <option value="Jacobabad">Jacobabad</option>
+  <option value="Jhang">Jhang</option>
+  <option value="Jhelum">Jhelum</option>
+  <option value="Karachi">Karachi</option>
+  <option value="Kasur">Kasur</option>
+  <option value="Khairpur">Khairpur</option>
+  <option value="Khushab">Khushab</option>
+  <option value="Kohat">Kohat</option>
+  <option value="Lahore">Lahore</option>
+  <option value="Larkana">Larkana</option>
+  <option value="Mansehra">Mansehra</option>
+  <option value="Mardan">Mardan</option>
+  <option value="Mingora">Mingora</option>
+  <option value="Mirpur">Mirpur</option>
+  <option value="Multan">Multan</option>
+  <option value="Muzaffarabad">Muzaffarabad</option>
+  <option value="Nawabshah">Nawabshah</option>
+  <option value="Okara">Okara</option>
+  <option value="Peshawar">Peshawar</option>
+  <option value="Quetta">Quetta</option>
+  <option value="Rahim Yar Khan">Rahim Yar Khan</option>
+  <option value="Rawalpindi">Rawalpindi</option>
+  <option value="Sadiqabad">Sadiqabad</option>
+  <option value="Sahiwal">Sahiwal</option>
+  <option value="Sargodha">Sargodha</option>
+  <option value="Sheikhupura">Sheikhupura</option>
+  <option value="Shikarpur">Shikarpur</option>
+  <option value="Sialkot">Sialkot</option>
+  <option value="Sukkur">Sukkur</option>
+  <option value="Swabi">Swabi</option>
+  <option value="Tando Adam">Tando Adam</option>
+  <option value="Vehari">Vehari</option>
+  <option value="Zhob">Zhob</option>
+</select>
+<input type="text" name="address" placeholder="Shipping Address" required />
+  <input type="number" name="quantity" placeholder="Quantity" min="1" required />
+  <textarea name="notes" placeholder="Additional Notes (optional)"></textarea>
+  <label>
+  <input type="checkbox" name="cod" required />
+  I agree to pay Cash on Delivery (COD)
+  <br>
+  <br>
+</label>
+<input type="hidden" name="_subject" value="New Cash on Delivery Order!" />
+  <input type="hidden" name="_template" value="table" />
+  <input type="hidden" name="_captcha" value="false" />
+  <!-- Single button -->
+<button type="button" id="mainOrderBtn">Place Order</button>
+<!-- Hidden option buttons -->
+<div id="orderOptions" style="display: none; margin-top: 15px;">
+  <button type="button" id="whatsappBtn">Order via WhatsApp</button>
+  <button type="button" id="codBtn">Cash on Delivery</button>
+</div>
+ </form>
+<div id="thankYouBox" class="thank-you" style="display: none;">
+  <div class="thank-you-content">
+    <h2>🎉 Thank You!</h2>
+    <p>Your Cash on Delivery order has been received.</p>
+  </div>
+</div>
+<script>
+  function changeImage(src) {
+    document.getElementById("main-image").src = src;
+  }
+</script>
+     <script src="orderpage.js"></script>
+</body>
+</html>
